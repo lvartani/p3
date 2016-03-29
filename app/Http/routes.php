@@ -11,10 +11,45 @@
 |
 */
 
+use Badcow\LoremIpsum\Generator;
+
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', function () {
-        return view('welcome');
+        // return view('welcome');
+        return 'WELCOME';
+    });
+
+    // Route::get('/text/show/{id}', 'TextController@getShow');
+    Route::get('/text/create', 'TextController@getCreate');
+
+    Route::post('/text/create', 'TextController@postCreate');
+
+    Route::get('/text/show/{title?}', 'TextController@getShow');
+
+
+    Route::get('/practice', function() {
+
+        $generator = new Generator();
+        $paragraphs = $generator->getParagraphs(4);
+        echo implode('<p>', $paragraphs);
+
+
+        // generate data by accessing properties
+        $fakeUser = Faker\Factory::create();
+
+        for ($i = 0; $i < 10 ; $i++) {
+    		$fakeUserData['name'][] = $fakeUser->name;
+    		$fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
+    		$fakeUserData['addressStreet'][] = $fakeUser->address;
+    		$fakeUserData['addressCity'][] = $fakeUser->city;
+    		$fakeUserData['addressState'][] = $fakeUser->state;
+            $fakeUserData['email'][] = $fakeUser->email;
+    	}
+            $image = $fakeUser->image($dir = '/tmp', $width = 640, $height = 480, 'cats', true, 'Faker') ;
+            $color = $fakeUser->hexcolor;
+            return $fakeUserData;
+            echo $color;
     });
 
 });
