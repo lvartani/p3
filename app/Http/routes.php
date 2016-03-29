@@ -21,15 +21,11 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     // Route::get('/text/show/{id}', 'TextController@getShow');
-    Route::get('/text/create', 'TextController@getCreate');
-
-    Route::post('/text/create', 'TextController@postCreate');
 
     Route::get('/text/create', 'UserController@getCreate');
 
     Route::post('/text/create', 'UserController@postCreate');
 
-    Route::get('/text/show/{title?}', 'TextController@getShow');
 
 
     Route::get('/practice', function() {

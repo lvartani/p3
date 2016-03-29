@@ -1,6 +1,6 @@
 @extends('layouts.create')
 
-@section('results')
+@section('userResults')
 
     <p class=""></p>
 
@@ -21,18 +21,16 @@
 	@endfor
 @endif
 
-@if (isset($Lorem) && isset($paragraphCount))
 
-	@for ($i = 0 ; $i < $paragraphCount ; $i++)
-        <p>  {{ $Lorem  }} </p>
+@stop
+
+@section('textResults')
+
+@if (isset($Lorem) && isset($paragraphCount))
+        <!-- tried blade formatting but did not work for echo implode variable so went back to php-->
+        <p>    <?php echo $Lorem; ?></p>
         <br>
 
-
-	@endfor
 @endif
-
-
-
-
 
 @stop

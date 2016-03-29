@@ -31,17 +31,19 @@ class UserController extends Controller {
         // dd($request);
 
 
+        $this->validate($request, [
+            'title'=> 'required|max:1'
+        ]);
 
         $generator = new Generator();
         $paragraphCount = $request->input('title');
+
         $paragraphs = $generator->getParagraphs($paragraphCount);
 
         // echo implode('<p>', $paragraphs);
         $Lorem = implode('<p>', $paragraphs);
 
-        $this->validate($request, [
-            'title'=> 'required|max:1'
-        ]);
+
 
         $this->validate($request, [
             'users'=> 'required|max:1'
@@ -61,17 +63,13 @@ class UserController extends Controller {
     		$fakeUserData['addressCity'][] = $fakeUser->city;
     		$fakeUserData['addressState'][] = $fakeUser->state;
             $fakeUserData['email'][] = $fakeUser->email;
-            $fakeUserData['image'][] = $fakeUser->imageUrl($width = 240, $height = 180);
+            $fakeUserData['image'][] = $fakeUser->imageUrl($width = 140, $height = 100);
 
     	}
-        for ($i = 0; $i <$paragraphCount; $i++) {
-
-
-        }
 
 
             // $image = $fakeUser->image($dir = '/tmp', $width = 640, $height = 480, 'cats', true, 'Faker') ;
-
+            // echo $Lorem;
             return view('layouts.results')  ->with('output', $fakeUserData)
                                             ->with('userCount',$userCount)
                                             ->with('Lorem',$Lorem)
