@@ -3,7 +3,7 @@
 <head>
     <title>
         {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
-        @yield('title','Foobooks')
+        @yield('title','TEXT')
     </title>
 
     <meta charset='utf-8'>
@@ -42,7 +42,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
-    @yield('body')
+    @yield('results')
+    @yield('textresults')
 
 </body>
 </html>

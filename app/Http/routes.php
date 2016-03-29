@@ -25,6 +25,10 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/text/create', 'TextController@postCreate');
 
+    Route::get('/text/create', 'UserController@getCreate');
+
+    Route::post('/text/create', 'UserController@postCreate');
+
     Route::get('/text/show/{title?}', 'TextController@getShow');
 
 

@@ -34,17 +34,7 @@ such as a page specific stylesheets.
             <br>{{ $errors->first('users')}}<br>
             <input type='text'
                 name='users'
-                value ='{{old('title')}}'>
-
-            <!-- <select class="form-control" class="userform">
-                <label> Number of Users: </label>
-                <br>{{ $errors->first('users')}}<br>
-                <option name ='users' value="1">1</option>
-                <option name ='users' value="2">2</option>
-                <option name ='users' value="3">3</option>
-                <option name ='users' value="4">4</option>
-                <option name ='users' value="5">5</option>
-            </select> -->
+                value ='{{old('users')}}'>
         </div>
 
         <button type="submit" class="btn btn-primary"> Submit</button>
@@ -68,6 +58,3 @@ This `body` section will be yielded right before the closing </body> tag.
 Use it to add specific things that *this* View needs at the end of the body,
 such as a page specific JavaScript files.
 --}}
-@section('body')
-    <script src="/js/text/show.js"></script>
-@stop
