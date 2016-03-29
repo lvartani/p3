@@ -16,6 +16,9 @@ header{
 .circle{
     border-radius: 50%;
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-    background-color: lightblue;
-    width:300px;
+    background-color: #66CCFF;
+    width:200px;
+    height:200px;
+    border: 1px solid #66CCFF;
+
 }

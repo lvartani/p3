@@ -8,7 +8,7 @@
 
 	@for ($i = 0 ; $i < $userCount ; $i++)
     <div class ="circle">
-		<h2> {{ $output['name'][$i]           }} </h2>
+		<h4> {{ $output['name'][$i]           }} </h4>
 		<p>  {{ $output['dob'][$i]            }} </p>
 		<p>  {{ $output['addressStreet'][$i]  }} </p>
 		<p>  {{ $output['addressCity'][$i]    }} </p>
