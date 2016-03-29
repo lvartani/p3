@@ -15,7 +15,9 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="/css/foobooks.css" type='text/css' rel='stylesheet'>
+    <link href="/css/master.css" type='text/css' rel='stylesheet'>
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
@@ -24,19 +26,20 @@
 <body>
 
     <header>
-        <img
-        src='/images/bubbles2.png'
-        style='width:300px'
+        <img id="logo"
+        src='/images/bubbles.png'
         alt='Logo'>
+        <h2>Lorem Ipsum and User Generator</h2>
+        &copy; {{ date('Y') }}
     </header>
 
-    <section>
+    <section id= "content">
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
 
-    <footer>
-        &copy; {{ date('Y') }}
+    <footer id = "footer">
+
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

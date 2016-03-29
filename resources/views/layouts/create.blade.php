@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Choose Text
+    User and Text Generator
 @stop
 
 
@@ -12,44 +12,47 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific stylesheets.
 --}}
 @section('head')
-    <link href="/css/books/show.css" type='text/css' rel='stylesheet'>
+    <link href="/css/create.css" type='text/css' rel='stylesheet'>
 @stop
 
 
 @section('content')
-    <h2>Random Text Generator</h2>
 
-    <form method = 'POST' action= '/text/create'>
-        {{ csrf_field() }}
-        <div class='form-group'>
-            <label> Number of Paragraphs: </label>
-            <br>{{ $errors->first('title')}}<br>
-            <input type='text'
-                name='title'
-                value ='{{old('title')}}'>
 
-    <h2>User Generator</h2>
-        <div class='form-group'>
-            <label> Number of Users: </label>
-            <br>{{ $errors->first('users')}}<br>
-            <input type='text'
-                name='users'
-                value ='{{old('users')}}'>
-        </div>
+    <div id ="form">
+        <h2>Random Text Generator</h2>
+        <form method = 'POST' action= '/text/create'>
+            {{ csrf_field() }}
+            <div class='form-group'>
+                <label> Number of Paragraphs: </label>
+                <br>{{ $errors->first('title')}}<br>
+                <input type='text'
+                    name='title'
+                    value ='{{old('title')}}'>
 
-        <button type="submit" class="btn btn-primary"> Submit</button>
-        <br>
+        <h2>User Generator</h2>
+            <div class='form-group'>
+                <label> Number of Users: </label>
+                <br>{{ $errors->first('users')}}<br>
+                <input type='text'
+                    name='users'
+                    value ='{{old('users')}}'>
+            </div>
 
-        <!-- <ul class ='errors'>
-        @foreach($errors->all() as $error)
-            <li> {{ $error}}<br></li>
-        @endforeach
-        </ul> -->
+            <button type="submit" class="btn btn-primary"> Submit</button>
+            <br>
 
-        @if (count($errors) > 0)
-            Please correct the errors above and try again
-        @endif
-    </form>
+            <!-- <ul class ='errors'>
+            @foreach($errors->all() as $error)
+                <li> {{ $error}}<br></li>
+            @endforeach
+            </ul> -->
+
+            @if (count($errors) > 0)
+                Please correct the errors above and try again
+            @endif
+        </form>
+    </div>
 @stop
 
 

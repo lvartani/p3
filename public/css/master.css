@@ -1,0 +1,21 @@
+#logo {
+    height:450px;
+
+}
+
+header{
+    float:left;
+    width:300px;
+    text-align: right;
+}
+
+#content {
+    margin-left: 5%;
+    padding:50px;
+}
+.circle{
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    background-color: lightblue;
+    width:300px;
+}
