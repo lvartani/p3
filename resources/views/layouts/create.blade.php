@@ -24,7 +24,7 @@ such as a page specific stylesheets.
         <form method = 'POST' action= '/text/create'>
             {{ csrf_field() }}
 
-            <h3>Users</h3>
+            <h3>Fake Users</h3>
                 <div class='form-group'>
                     <label> Number of Users: </label>
                     <br>{{ $errors->first('users')}}<br>
@@ -43,7 +43,7 @@ such as a page specific stylesheets.
 
 
 
-            <button type="submit" class="btn btn-warning"> Submit</button>
+            <button type="submit" class="btn btn-info"> Submit</button>
             <br>
 
             <!-- <ul class ='errors'>
