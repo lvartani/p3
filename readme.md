@@ -1,4 +1,4 @@
-# P3
+## P3
 # Bubble Generator 
 
 ## Live URL
@@ -24,5 +24,5 @@ badcow/lorem-ipsum
 bootstrap
 <http://getbootstrap.com/>
 
-# License
+## License
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
