@@ -63,7 +63,7 @@
 
     <footer id = "footer">
         <h2 id ="title">Bubble Generator</h2>
-        <a class="btn btn-default" class= "github" href="https://github.com/lvartani/p3" role="button">Github</a>
+        <a class="btn btn-default" href="https://github.com/lvartani/p3" role="button">Github</a>
 
         <p class= "date">&copy; {{ date('Y') }}<p>
 
