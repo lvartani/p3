@@ -20,26 +20,30 @@ such as a page specific stylesheets.
 
 
     <div id ="form">
-        <h2>Random Text Generator</h2>
+
         <form method = 'POST' action= '/text/create'>
             {{ csrf_field() }}
-            <div class='form-group'>
-                <label> Number of Paragraphs: </label>
-                <br>{{ $errors->first('title')}}<br>
-                <input type='text'
-                    name='title'
-                    value ='{{old('title')}}'>
 
-        <h2>User Generator</h2>
-            <div class='form-group'>
-                <label> Number of Users: </label>
-                <br>{{ $errors->first('users')}}<br>
-                <input type='text'
-                    name='users'
-                    value ='{{old('users')}}'>
-            </div>
+            <h3>Users</h3>
+                <div class='form-group'>
+                    <label> Number of Users: </label>
+                    <br>{{ $errors->first('users')}}<br>
+                    <input type='text'
+                        name='users'
+                        value ='{{old('users')}}'>
+                </div>
+            <h3>Lorem Ipsum</h3>
+                <div class='form-group'>
+                    <label> Number of Paragraphs: </label>
+                    <br>{{ $errors->first('title')}}<br>
+                    <input type='text'
+                        name='title'
+                        value ='{{old('title')}}'>
+                </div>
 
-            <button type="submit" class="btn btn-primary"> Submit</button>
+
+
+            <button type="submit" class="btn btn-warning"> Submit</button>
             <br>
 
             <!-- <ul class ='errors'>

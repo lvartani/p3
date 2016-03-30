@@ -2,25 +2,25 @@
 
 @section('userResults')
 
-    <p class=""></p>
+    
 
 @if (isset($output) && isset($userCount))
 
 	@for ($i = 0 ; $i < $userCount ; $i++)
     <div class ="circle">
-		<h4> {{ $output['name'][$i]           }} </h4>
-		<p>  {{ $output['dob'][$i]            }} </p>
-		<p>  {{ $output['addressStreet'][$i]  }} </p>
-		<p>  {{ $output['addressCity'][$i]    }} </p>
-		<p>  {{ $output['addressState'][$i]   }} </p>
-        <p>  {{ $output['email'][$i]   }} </p>
-        <label>Profile Picture: </label>
-        <br>
+		<h4 class ="htext" > {{ $output['name'][$i]           }} </h4>
+		<p class ="utext"  >  {{ $output['dob'][$i]            }} </p>
+		<p class ="utext" >  {{ $output['addressStreet'][$i]  }} </p>
+        <p class ="utext">  {{ $output['email'][$i]   }} </p>
+
     </div>
 
-    <div class="circle">
-        <img src = "{{$output['image'][$i] }}"></img>
+    <div class="circle2">
+        <label class="labeltext">{{ $output['name'][$i]}} Pic </label>
+        <img  class= "image" src = "{{$output['image'][$i] }}"</img>
     </div>
+
+    <div class="circle3" style ="background-color:{{ $output['color'][$i]}}"></div>
 
 
 	@endfor
@@ -33,8 +33,8 @@
 
 @if (isset($Lorem) && isset($paragraphCount))
         <!-- tried blade formatting but did not work for echo implode variable so went back to php echo-->
-        <p>    <?php echo $Lorem; ?></p>
-        <br>
+            <p>    <?php echo $Lorem; ?></p>
+            <br>
 
 @endif
 

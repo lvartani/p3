@@ -46,7 +46,7 @@ class UserController extends Controller {
 
 
         $this->validate($request, [
-            'users'=> 'required|max:1'
+            'users'=> 'required|max:2'
         ]);
 
         // generate data by accessing properties
@@ -60,10 +60,9 @@ class UserController extends Controller {
             $fakeUserData['name'][] = $fakeUser->name;
     		$fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
     		$fakeUserData['addressStreet'][] = $fakeUser->address;
-    		$fakeUserData['addressCity'][] = $fakeUser->city;
-    		$fakeUserData['addressState'][] = $fakeUser->state;
             $fakeUserData['email'][] = $fakeUser->email;
-            $fakeUserData['image'][] = $fakeUser->imageUrl($width = 140, $height = 100);
+            $fakeUserData['image'][] = $fakeUser->imageUrl($width = 110, $height = 70);
+            $fakeUserData['color'][] = $fakeUser->hexcolor;
 
     	}
 
