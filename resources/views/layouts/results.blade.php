@@ -17,7 +17,7 @@
     <!-- <div class="circle4" style ="background-color:{{ $output['color'][$i]}}"></div> -->
 
     <div class="circle2">
-        <label class="labeltext">{{ $output['name'][$i]}} Pic </label>
+        <label class="labeltext">{{ $output['name'][$i]}} Profile Pic </label>
         <img  class= "image" src = "{{$output['image'][$i] }}"</img>
     </div>
 

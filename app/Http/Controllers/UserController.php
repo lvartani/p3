@@ -32,7 +32,7 @@ class UserController extends Controller {
 
 
         $this->validate($request, [
-            'title'=> 'required|max:1'
+            'title'=> 'required|max:9|min:1|numeric'
         ]);
 
         $generator = new Generator();
@@ -46,7 +46,7 @@ class UserController extends Controller {
 
 
         $this->validate($request, [
-            'users'=> 'required|max:2'
+            'users'=> 'required|numeric|max:99|min:1'
         ]);
 
         // generate data by accessing properties
