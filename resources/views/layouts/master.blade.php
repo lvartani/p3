@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
         @yield('title','TEXT')
     </title>
 
@@ -16,22 +15,22 @@
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
-    @yield('head')
+        @yield('head')
 
-</head>
-<body>
+    </head>
+    <body>
         <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">DWA 2016</a>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">DWA 2016</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="http://p1.loosine.com" class= "external">Home</a></li>
+                    <li><a href="http://p2.loosine.com" class= "external">Project 2</a></li>
+                    <li class="active"><a href="#">Project 3</a></li>
+                    <li><a href="#">Project 4</a></li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav">
-              <li><a href="http://p1.loosine.com" class= "external">Home</a></li>
-              <li><a href="http://p2.loosine.com" class= "external">Project 2</a></li>
-              <li class="active"><a href="#">Project 3</a></li>
-              <li><a href="#">Project 4</a></li>
-            </ul>
-          </div>
         </nav>
 
 
@@ -57,23 +56,24 @@
         <section id ="Loremtext">
             @yield('textResults')
         </section>
+        <br>
 
 
 
 
-    <footer id = "footer">
-        <h2 id ="title">Bubble Generator</h2>
-        <a class="btn btn-default" href="https://github.com/lvartani/p3" role="button">Github</a>
+        <footer id = "footer">
+            <h2 id ="title">Bubble Generator</h2>
+            <a class="btn btn-default" href="https://github.com/lvartani/p3" role="button">Github</a>
 
-        <p class= "date">&copy; {{ date('Y') }}<p>
+            <p class= "date">&copy; {{ date('Y') }}<p>
 
-    </footer>
+            </footer>
 
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
+            <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+            <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
 
 
-</body>
-</html>
+        </body>
+        </html>

@@ -21,8 +21,8 @@ class UserController extends Controller {
     }
 
     /**
-     * Responds to requests to POST /books/create
-     */
+    * Responds to requests to POST /books/create
+    */
     // public function postCreate() {
     //     return 'Number of Paragraphs: '.$_POST['title'];
     // }
@@ -54,25 +54,25 @@ class UserController extends Controller {
 
         $userCount = $request->input('users');
 
-
+        
         for ($i = 0; $i < $userCount ; $i++) {
 
             $fakeUserData['name'][] = $fakeUser->name;
-    		$fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
-    		$fakeUserData['addressStreet'][] = $fakeUser->address;
+            $fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
+            $fakeUserData['addressStreet'][] = $fakeUser->address;
             $fakeUserData['email'][] = $fakeUser->email;
             $fakeUserData['image'][] = $fakeUser->imageUrl($width = 110, $height = 70);
             $fakeUserData['color'][] = $fakeUser->hexcolor;
 
-    	}
+        }
 
 
-            // $image = $fakeUser->image($dir = '/tmp', $width = 640, $height = 480, 'cats', true, 'Faker') ;
-            // echo $Lorem;
-            return view('layouts.results')  ->with('output', $fakeUserData)
-                                            ->with('userCount',$userCount)
-                                            ->with('Lorem',$Lorem)
-                                            ->with('paragraphCount',$paragraphCount);
+        // $image = $fakeUser->image($dir = '/tmp', $width = 640, $height = 480, 'cats', true, 'Faker') ;
+        // echo $Lorem;
+        return view('layouts.results')  ->with('output', $fakeUserData)
+        ->with('userCount',$userCount)
+        ->with('Lorem',$Lorem)
+        ->with('paragraphCount',$paragraphCount);
 
 
 

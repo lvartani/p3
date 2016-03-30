@@ -53,14 +53,14 @@ form, #form {
 }
 
 #bubbles {
-float:left;
-display:inline-block;
-width:700px;
+    float:left;
+    display:inline-block;
+    width:700px;
 }
 
 #wrapper {
-     width: 100%;
-     margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 .circle{
     border-radius: 50%;
@@ -134,8 +134,10 @@ width:700px;
     font-color:darkblue;
     font-weight: bold;
     font-family: 'Raleway';
-    width:800px;
+    width:950px;
     float:right;
+    padding: 30px;
+    margin-bottom: 5%;
 }
 
 .date {
