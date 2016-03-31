@@ -34,7 +34,7 @@
         </nav>
 
 
-        <img id="logo"src='/images/bubbles3.png'alt='Logo'></img>
+        <img id="logo" src='/images/bubbles3.png' alt='Logo'></img>
 
         <div class ="description">
             <h3> What is Lorem Ipsum?</h3>
