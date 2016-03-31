@@ -34,9 +34,7 @@
         </nav>
 
 
-        <img id="logo"
-        src='/images/bubbles3.png'
-        alt='Logo'></img>
+        <img id="logo"src='/images/bubbles3.png'alt='Logo'></img>
 
         <div class ="description">
             <h3> What is Lorem Ipsum?</h3>
@@ -62,7 +60,7 @@
 
 
         <footer id = "footer">
-            <h2 id ="title">Bubble Generator</h2>
+            <h2 id ="title">Developer's Best Friend</h2>
             <a class="btn btn-default" href="https://github.com/lvartani/p3" role="button">Github</a>
 
             <p class= "date">&copy; {{ date('Y') }}<p>

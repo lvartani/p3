@@ -21,7 +21,7 @@ User and Text Generator
 
     <div id ="form">
 
-        <form method = 'POST' action= '/text/create'>
+        <form method = 'POST' action= '/'>
             {{ csrf_field() }}
 
             <h3>Fake Users</h3>
