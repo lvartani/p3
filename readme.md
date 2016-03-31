@@ -1,5 +1,5 @@
 ## P3
-# Bubble Generator 
+## Developer's Best Friend (Bubble Generator)
 
 ## Live URL
 <http://p3.loosine.com>
