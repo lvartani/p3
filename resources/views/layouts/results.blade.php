@@ -11,7 +11,7 @@
     <h4 class ="htext" > {{ $output['name'][$i]}} </h4>
     <p class ="utext"  >  {{ $output['dob'][$i]}} </p>
     <p class ="utext" >  {{ $output['addressStreet'][$i]  }} </p>
-    <p class ="utext">  {{ $output['email'][$i]}} </p>
+    <p class ="utext">  {{ $output['phoneNumber'][$i]}} </p>
 
 </div>
 <!-- <div class="circle4" style ="background-color:{{ $output['color'][$i]}}"></div> -->

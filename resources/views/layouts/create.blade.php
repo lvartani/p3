@@ -38,7 +38,8 @@ User and Text Generator
                 <br>{{ $errors->first('title')}}<br>
                 <input type='text'
                 name='title'
-                value ='{{old('title')}}'>
+                value ='{{old('title')}}'
+                maxlength=1>
             </div>
 
 

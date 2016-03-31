@@ -37,7 +37,6 @@ class UserController extends Controller {
 
         $generator = new Generator();
         $paragraphCount = $request->input('title');
-
         $paragraphs = $generator->getParagraphs($paragraphCount);
 
         // echo implode('<p>', $paragraphs);
@@ -54,13 +53,13 @@ class UserController extends Controller {
 
         $userCount = $request->input('users');
 
-        
+
         for ($i = 0; $i < $userCount ; $i++) {
 
             $fakeUserData['name'][] = $fakeUser->name;
             $fakeUserData['dob'][]  = $fakeUser->dateTimeThisCentury->format('Y-m-d');
             $fakeUserData['addressStreet'][] = $fakeUser->address;
-            $fakeUserData['email'][] = $fakeUser->email;
+            $fakeUserData['phoneNumber'][] = $fakeUser->phoneNumber;
             $fakeUserData['image'][] = $fakeUser->imageUrl($width = 110, $height = 70);
             $fakeUserData['color'][] = $fakeUser->hexcolor;
 
