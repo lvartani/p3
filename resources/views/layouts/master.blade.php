@@ -22,13 +22,14 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">DWA 2016</a>
+                    <a class="navbar-brand" href="#">DWA15 Spring 2016</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="http://p1.loosine.com" class= "external">Home</a></li>
                     <li><a href="http://p2.loosine.com" class= "external">Project 2</a></li>
-                    <li class="active"><a href="#">Project 3</a></li>
+                    <li class="active"><a href="http://p3.loosine.com">Project 3</a></li>
                     <li><a href="#">Project 4</a></li>
+                    <li class="active"><a href="https://github.com/lvartani/p3">Github</a></li>
                 </ul>
             </div>
         </nav>
