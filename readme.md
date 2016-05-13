@@ -1,5 +1,5 @@
 ## P3
-# Bubble Generator 
+## Developer's Best Friend (Bubble Generator)
 
 ## Live URL
 <http://p3.loosine.com>
@@ -8,7 +8,7 @@
 A tool for generating user profiles and Lorem Ipsum text. The bubble generator outputs user info, user profile photos, and randomixed hex color bubbles. 
 
 ## Demo
-<http://www.screencast.com/t/uriDXDLK0ddR>
+<http://screencast.com/t/x7PBy1Bq4Eo>
 
 ## Details for teaching team
 none
